@@ -77,14 +77,20 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hHV-7D-TAT">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Aw-ic-kNc">
+                                        <rect key="frame" x="69" y="106" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.90000000000000002" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hHV-7D-TAT">
                                         <rect key="frame" x="120" y="33" width="118" height="31"/>
                                         <connections>
                                             <action selector="velocitySliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="EE2-yh-5bX"/>
                                         </connections>
                                     </slider>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-2g-NTA">
-                                        <rect key="frame" x="120" y="67" width="118" height="31"/>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.69999999999999996" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="CgT-2g-NTA">
+                                        <rect key="frame" x="120" y="67" width="172" height="31"/>
                                         <connections>
                                             <action selector="durationSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="6Rd-tm-YqA"/>
                                         </connections>
@@ -95,8 +101,14 @@
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-j8-96y">
-                                        <rect key="frame" x="10" y="105" width="282" height="29"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="delay" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFs-Ee-FTN">
+                                        <rect key="frame" x="8" y="103" width="58" height="27"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="RUh-j8-96y">
+                                        <rect key="frame" x="8" y="138" width="282" height="29"/>
                                         <segments>
                                             <segment title="EaseIn"/>
                                             <segment title="EaseOut"/>
@@ -104,10 +116,16 @@
                                             <segment title="Linear"/>
                                         </segments>
                                     </segmentedControl>
-                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-Xn-Xy0">
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.69999999999999996" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Pcr-Xn-Xy0">
                                         <rect key="frame" x="120" y="0.0" width="118" height="31"/>
                                         <connections>
                                             <action selector="dampingSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="mvc-fX-0YG"/>
+                                        </connections>
+                                    </slider>
+                                    <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.10000000000000001" minValue="0.0" maxValue="3" translatesAutoresizingMaskIntoConstraints="NO" id="Y5e-1a-4WT">
+                                        <rect key="frame" x="120" y="100" width="172" height="31"/>
+                                        <connections>
+                                            <action selector="delaySliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="vFF-5L-h1H"/>
                                         </connections>
                                     </slider>
                                 </subviews>
@@ -120,18 +138,54 @@
                                     <constraint firstItem="i61-OT-QB7" firstAttribute="top" secondItem="yOS-lU-Xvy" secondAttribute="top" constant="11" id="yqA-N5-qjC"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nff-xs-ZCw">
+                                <rect key="frame" x="524" y="354" width="69" height="38"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="GOs-c6-hZK"/>
+                                    <constraint firstAttribute="height" constant="38" id="P08-W8-9Me"/>
+                                </constraints>
+                                <state key="normal" title="X">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="removeButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lbf-fG-TKR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fj7-FT-Jas">
+                                <rect key="frame" x="447" y="354" width="69" height="38"/>
+                                <color key="backgroundColor" red="0.72156862749999995" green="0.76078431369999999" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="5NL-oe-0fn"/>
+                                    <constraint firstAttribute="height" constant="38" id="Hdu-iF-hw8"/>
+                                </constraints>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="addButtonAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DCe-Yg-LHv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yOS-lU-Xvy" secondAttribute="bottom" id="5Te-4f-iWI"/>
+                            <constraint firstAttribute="trailing" secondItem="nff-xs-ZCw" secondAttribute="trailing" constant="7" id="aAS-rF-V9M"/>
+                            <constraint firstItem="nff-xs-ZCw" firstAttribute="leading" secondItem="fj7-FT-Jas" secondAttribute="trailing" constant="8" id="iju-sI-BDb"/>
                             <constraint firstAttribute="trailing" secondItem="yOS-lU-Xvy" secondAttribute="trailing" id="oUV-Fo-pqu"/>
                             <constraint firstItem="yOS-lU-Xvy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="sAc-CJ-kuQ"/>
+                            <constraint firstItem="yOS-lU-Xvy" firstAttribute="top" secondItem="fj7-FT-Jas" secondAttribute="bottom" constant="8" id="sNA-ey-mrb"/>
+                            <constraint firstItem="yOS-lU-Xvy" firstAttribute="top" secondItem="nff-xs-ZCw" secondAttribute="bottom" constant="8" id="vFp-PT-nPR"/>
                         </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="animationOptionSegment" destination="RUh-j8-96y" id="3kX-xX-erg"/>
                         <outlet property="dampingSlider" destination="Pcr-Xn-Xy0" id="VUz-pb-nrU"/>
                         <outlet property="dampingValueLabel" destination="Diy-Uc-ibo" id="Her-iD-U3L"/>
+                        <outlet property="delaySlider" destination="Y5e-1a-4WT" id="QK2-IA-a6b"/>
+                        <outlet property="delayValueLabel" destination="8Aw-ic-kNc" id="q7I-3T-ZGx"/>
                         <outlet property="durationSlider" destination="CgT-2g-NTA" id="QbC-Dt-sEb"/>
                         <outlet property="durationValueLabel" destination="bHH-Lp-Qxs" id="KBN-b4-8GH"/>
                         <outlet property="velocitySlider" destination="hHV-7D-TAT" id="Tdy-rb-3uw"/>
